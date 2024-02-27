@@ -15,7 +15,7 @@ jobs:
       shell: bash
       run: |
         curl -Lo ./crun https://github.com/containers/crun/releases/download/1.14.3/crun-1.14.3-linux-amd64
-        gpg --keyserver hkp://keys.gnupg.net --recv-keys AF60FCA3CDAA6DEAD157EA3A67E38F7A8BA21772
+        gpg --keyserver https://savannah.gnu.org/project/release-gpgkeys.php?group=crun&download=1 --recv-keys AF60FCA3CDAA6DEAD157EA3A67E38F7A8BA21772
         gpg --verify .github/actions/setup/crun-1.14.3-linux-amd64.asc ./crun 
         sudo install crun /usr/bin/crun
 
