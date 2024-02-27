@@ -16,7 +16,7 @@ jobs:
       run: |
         set -x
         curl -Lo ./crun https://github.com/containers/crun/releases/download/1.14.3/crun-1.14.3-linux-amd64
-        GOOD_SHA=e217dfe816ed1af90f3ae923a84303e20b34f41bf68a236d9e506ba481b8d274
+        GOOD_SHA=80c5ab9422d4672f650f2bad3da933568349b64117d055486abc3534517be2af
         sha256sum ./crun
         OUR_SHA=$(sha256sum ./crun | awk '{ print $1 }')
         if [[ "$GOOD_SHA" == "$OUR_SHA" ]]; then
