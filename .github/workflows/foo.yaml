@@ -15,7 +15,7 @@ jobs:
       shell: bash
       run: |
         curl -Lo ./crun https://github.com/containers/crun/releases/download/1.14.3/crun-1.14.3-linux-amd64
-        gpg --verify ./crun .github/actions/setup/crun-1.14.3-linux-amd64.asc
+        gpg --verify .github/actions/setup/crun-1.14.3-linux-amd64.asc ./crun 
         sudo install crun /usr/bin/crun
 
     - run: crun --version
